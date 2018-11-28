@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Email View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EmailViewController" customModule="Opdracht6_veiling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHt-aO-67h">
+                                <rect key="frame" x="38" y="69" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiG-p8-TVT">
+                                <rect key="frame" x="38" y="107" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyX-MX-XFc">
+                                <rect key="frame" x="182" y="64" width="201" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="example@example.com"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzB-I2-3nm">
+                                <rect key="frame" x="182" y="107" width="201" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="example@example.com"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXV-qc-Y33">
+                                <rect key="frame" x="36" y="172" width="57" height="30"/>
+                                <state key="normal" title="Register"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RiG-p8-TVT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="1SY-CL-R9o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bzB-I2-3nm" secondAttribute="trailing" constant="729" id="6RD-HU-qCx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jyX-MX-XFc" secondAttribute="trailing" constant="729" id="96N-76-wxi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bXV-qc-Y33" secondAttribute="trailing" constant="1019" id="AEl-yF-opk"/>
+                            <constraint firstItem="bHt-aO-67h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="HWn-dz-jYY"/>
+                            <constraint firstItem="RiG-p8-TVT" firstAttribute="top" secondItem="bHt-aO-67h" secondAttribute="bottom" constant="17" id="Mjz-ay-vsI"/>
+                            <constraint firstItem="bzB-I2-3nm" firstAttribute="leading" secondItem="RiG-p8-TVT" secondAttribute="trailing" constant="70" id="Sm0-q3-woY"/>
+                            <constraint firstItem="jyX-MX-XFc" firstAttribute="leading" secondItem="bHt-aO-67h" secondAttribute="trailing" constant="95" id="blO-XP-cul"/>
+                            <constraint firstItem="bzB-I2-3nm" firstAttribute="top" secondItem="jyX-MX-XFc" secondAttribute="bottom" constant="13" id="ici-IH-Oad"/>
+                            <constraint firstItem="jyX-MX-XFc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="nJC-0v-nCw"/>
+                            <constraint firstItem="bXV-qc-Y33" firstAttribute="top" secondItem="RiG-p8-TVT" secondAttribute="bottom" constant="44" id="tAn-Pk-mhI"/>
+                            <constraint firstItem="bXV-qc-Y33" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="uQn-3O-rnW"/>
+                            <constraint firstItem="bHt-aO-67h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="ybm-5e-G6a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.884892086330936" y="15.827338129496404"/>
         </scene>
     </scenes>
 </document>
