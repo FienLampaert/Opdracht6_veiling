@@ -142,12 +142,225 @@
                             <constraint firstItem="WYn-Le-gDz" firstAttribute="leading" secondItem="dXg-Ea-u3H" secondAttribute="trailing" constant="110" id="zfq-QH-E9h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RM9-Rq-Q8V"/>
+                                <exclude reference="Wl6-PK-Mms"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2UU-Fq-iXi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="733.09352517985621" y="15.647482014388491"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="0zL-Eg-Qxp">
+            <objects>
+                <viewController id="t9c-gW-a1u" customClass="RegisterViewController" customModule="Opdracht6_veiling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YAf-gV-j8S">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAa-4e-bh6">
+                                <rect key="frame" x="0.0" y="20" width="834" height="158"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="NXu-0c-qTX"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Register">
+                                        <attributes>
+                                            <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="96" name="DevanagariSangamMN-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-K3-7W4">
+                                <rect key="frame" x="74" y="227" width="115.5" height="65.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Email">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRx-7W-05A">
+                                <rect key="frame" x="299" y="227" width="408.5" height="65.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKh-5F-3ga">
+                                <rect key="frame" x="74" y="321" width="210" height="66"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Username">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZq-Rm-mZ3">
+                                <rect key="frame" x="300" y="321" width="408.5" height="65.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkl-Iv-MKi">
+                                <rect key="frame" x="74" y="423" width="188" height="66"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Birthdate">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-uq-kpA">
+                                <rect key="frame" x="300" y="423" width="408.5" height="65.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-U2-Hnl">
+                                <rect key="frame" x="73" y="523" width="196" height="66"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Password">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RA2-7b-qCe">
+                                <rect key="frame" x="299" y="523" width="408.5" height="65.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-IZ-lqH">
+                                <rect key="frame" x="73" y="625" width="148" height="66"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Repeat">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxb-9V-V4Y">
+                                <rect key="frame" x="299" y="625" width="408.5" height="65.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWf-vv-BhA">
+                                <rect key="frame" x="101" y="880" width="261.5" height="77"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Cancel">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EmD-p7-iCp">
+                                <rect key="frame" x="473" y="880" width="261.5" height="77"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Register">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="bottom" secondItem="EmD-p7-iCp" secondAttribute="bottom" constant="155" id="0Pc-4p-WV8"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="Hxb-9V-V4Y" secondAttribute="trailing" constant="126.5" id="0jK-87-cG6"/>
+                            <constraint firstItem="SeS-IZ-lqH" firstAttribute="top" secondItem="Hxb-9V-V4Y" secondAttribute="top" id="3bc-Ng-V6s"/>
+                            <constraint firstItem="kKh-5F-3ga" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="74" id="7tW-fb-jxx"/>
+                            <constraint firstItem="kKh-5F-3ga" firstAttribute="top" secondItem="0m5-K3-7W4" secondAttribute="bottom" constant="28.5" id="Abe-pg-8yB"/>
+                            <constraint firstItem="qAa-4e-bh6" firstAttribute="top" secondItem="ICC-O0-Z7Y" secondAttribute="top" id="Ahz-1R-hyA"/>
+                            <constraint firstItem="Hxb-9V-V4Y" firstAttribute="height" secondItem="JRx-7W-05A" secondAttribute="height" id="BgS-QF-gpJ"/>
+                            <constraint firstItem="0m5-K3-7W4" firstAttribute="top" secondItem="qAa-4e-bh6" secondAttribute="bottom" constant="49" id="DXX-MT-Bae"/>
+                            <constraint firstItem="RA2-7b-qCe" firstAttribute="width" secondItem="JRx-7W-05A" secondAttribute="width" id="JLN-eg-7cb"/>
+                            <constraint firstItem="Msg-U2-Hnl" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="73" id="Jlg-12-8fB"/>
+                            <constraint firstItem="Msg-U2-Hnl" firstAttribute="top" secondItem="RA2-7b-qCe" secondAttribute="top" id="K4a-LX-M1R"/>
+                            <constraint firstItem="Hxb-9V-V4Y" firstAttribute="width" secondItem="JRx-7W-05A" secondAttribute="width" id="KWs-Ez-r8t"/>
+                            <constraint firstItem="AZq-Rm-mZ3" firstAttribute="height" secondItem="JRx-7W-05A" secondAttribute="height" id="Lpa-b0-yKK"/>
+                            <constraint firstItem="RA2-7b-qCe" firstAttribute="leading" secondItem="Msg-U2-Hnl" secondAttribute="trailing" constant="30" id="NKN-yN-Pci"/>
+                            <constraint firstItem="2i1-uq-kpA" firstAttribute="leading" secondItem="qkl-Iv-MKi" secondAttribute="trailing" constant="38" id="OiO-ez-LIM"/>
+                            <constraint firstItem="qAa-4e-bh6" firstAttribute="trailing" secondItem="ICC-O0-Z7Y" secondAttribute="trailing" id="Q0H-PZ-AFD"/>
+                            <constraint firstItem="qkl-Iv-MKi" firstAttribute="top" secondItem="ICC-O0-Z7Y" secondAttribute="top" constant="403" id="R3i-0d-H4H"/>
+                            <constraint firstItem="Hxb-9V-V4Y" firstAttribute="leading" secondItem="SeS-IZ-lqH" secondAttribute="trailing" constant="78" id="RKU-9s-WXM"/>
+                            <constraint firstItem="0m5-K3-7W4" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="74" id="Smn-8h-UOf"/>
+                            <constraint firstItem="qkl-Iv-MKi" firstAttribute="top" secondItem="kKh-5F-3ga" secondAttribute="bottom" constant="36" id="T0L-2d-pcA"/>
+                            <constraint firstItem="2i1-uq-kpA" firstAttribute="width" secondItem="JRx-7W-05A" secondAttribute="width" id="Wll-94-2h2"/>
+                            <constraint firstItem="AZq-Rm-mZ3" firstAttribute="width" secondItem="JRx-7W-05A" secondAttribute="width" id="YLk-ux-zQ0"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="AZq-Rm-mZ3" secondAttribute="trailing" constant="125.5" id="aJM-pm-bju"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="JRx-7W-05A" secondAttribute="trailing" constant="126.5" id="agH-Vm-2LT"/>
+                            <constraint firstItem="RA2-7b-qCe" firstAttribute="height" secondItem="JRx-7W-05A" secondAttribute="height" id="bzP-c3-sfl"/>
+                            <constraint firstItem="0m5-K3-7W4" firstAttribute="height" secondItem="JRx-7W-05A" secondAttribute="height" id="coe-JQ-kvA"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="RA2-7b-qCe" secondAttribute="trailing" constant="126.5" id="fHI-Sd-zu4"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="EmD-p7-iCp" secondAttribute="trailing" constant="99.5" id="fYD-sz-fW3"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="2i1-uq-kpA" secondAttribute="trailing" constant="125.5" id="fZq-F8-doR"/>
+                            <constraint firstItem="qkl-Iv-MKi" firstAttribute="top" secondItem="2i1-uq-kpA" secondAttribute="top" id="g6R-Zz-Zkf"/>
+                            <constraint firstItem="qkl-Iv-MKi" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="74" id="h7y-5W-YEs"/>
+                            <constraint firstItem="0m5-K3-7W4" firstAttribute="top" secondItem="JRx-7W-05A" secondAttribute="top" id="lsk-MY-UZa"/>
+                            <constraint firstItem="JRx-7W-05A" firstAttribute="leading" secondItem="0m5-K3-7W4" secondAttribute="trailing" constant="109.5" id="m8b-QR-2o1"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="bottom" secondItem="oWf-vv-BhA" secondAttribute="bottom" constant="155" id="mKf-VS-ted"/>
+                            <constraint firstItem="kKh-5F-3ga" firstAttribute="top" secondItem="AZq-Rm-mZ3" secondAttribute="top" id="mw9-5V-8Qw"/>
+                            <constraint firstItem="SeS-IZ-lqH" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="73" id="obl-E6-cht"/>
+                            <constraint firstItem="AZq-Rm-mZ3" firstAttribute="leading" secondItem="kKh-5F-3ga" secondAttribute="trailing" constant="16" id="pDK-XS-DdA"/>
+                            <constraint firstItem="Msg-U2-Hnl" firstAttribute="top" secondItem="qkl-Iv-MKi" secondAttribute="bottom" constant="34" id="pc5-Z4-gcN"/>
+                            <constraint firstItem="EmD-p7-iCp" firstAttribute="leading" secondItem="oWf-vv-BhA" secondAttribute="trailing" constant="110.5" id="qeH-oP-PqB"/>
+                            <constraint firstItem="oWf-vv-BhA" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="101" id="qop-C1-mSF"/>
+                            <constraint firstItem="oWf-vv-BhA" firstAttribute="width" secondItem="EmD-p7-iCp" secondAttribute="width" id="tSX-VL-UTr"/>
+                            <constraint firstItem="SeS-IZ-lqH" firstAttribute="top" secondItem="Msg-U2-Hnl" secondAttribute="bottom" constant="36" id="vWa-qt-YUa"/>
+                            <constraint firstItem="qAa-4e-bh6" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" id="x2j-QL-Mth"/>
+                            <constraint firstItem="2i1-uq-kpA" firstAttribute="height" secondItem="JRx-7W-05A" secondAttribute="height" id="yPd-oy-oYw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ICC-O0-Z7Y"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="R3i-0d-H4H"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHG-2I-4YQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F9i-QK-WgV">
