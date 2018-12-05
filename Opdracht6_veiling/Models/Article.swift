@@ -12,10 +12,10 @@ class Article {
     
     var id:String
     var description:String
-    var minBid:Float
+    var minBid:Double
     var bids: [Bid]
     
-    init(id:String, description:String, minBid:Float, bids:[Bid]?) {
+    init(id:String, description:String, minBid:Double, bids:[Bid]?) {
         self.id = id
         self.description = description
         self.minBid = minBid
@@ -34,7 +34,7 @@ class Article {
         return description
     }
     
-    func getMinBid() -> Float {
+    func getMinBid() -> Double {
         return minBid
     }
     

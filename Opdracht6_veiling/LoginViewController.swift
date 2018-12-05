@@ -49,6 +49,16 @@ class LoginViewController: UIViewController, LoginValidationProtocol {
     
     func loginCompleted(login: Login?, error: String?) {
         lbError.text = error ?? ""
+        
+        if let l = login {
+            navigateTest()
+        }
+    }
+    
+    func navigateTest(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "bidsTableViewController") as! BidsTableViewController
+        self.present(vc, animated: true, completion: nil)
     }
     
 }
