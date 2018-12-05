@@ -10,13 +10,18 @@
 		3F01C0B921AFDC1B0000957B /* bids.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F01C0B821AFDC1B0000957B /* bids.jpg */; };
 		3F01C0BB21AFDD160000957B /* Bids2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F01C0BA21AFDD160000957B /* Bids2.png */; };
 		3F01C0C221AFEA910000957B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01C0C121AFEA910000957B /* RegisterViewController.swift */; };
+		3F33448721B7BF89002767DA /* RegistrationValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33448621B7BF89002767DA /* RegistrationValidation.swift */; };
+		3F33448921B7BFE8002767DA /* RegistrationValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33448821B7BFE8002767DA /* RegistrationValidationProtocol.swift */; };
+		3F33448B21B7C02A002767DA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33448A21B7C02A002767DA /* Login.swift */; };
+		3F33448D21B7D17F002767DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33448C21B7D17F002767DA /* LoginViewController.swift */; };
+		3F33449121B7D21A002767DA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33449021B7D21A002767DA /* LoginValidation.swift */; };
+		3F33449521B7D240002767DA /* LoginValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33449421B7D240002767DA /* LoginValidationProtocol.swift */; };
 		3FD99FFA21AE812E00C7B4AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD99FF921AE812E00C7B4AC /* AppDelegate.swift */; };
 		3FD99FFC21AE812E00C7B4AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD99FFB21AE812E00C7B4AC /* ViewController.swift */; };
 		3FD99FFF21AE812E00C7B4AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD99FFD21AE812E00C7B4AC /* Main.storyboard */; };
 		3FD9A00121AE813100C7B4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9A00021AE813100C7B4AC /* Assets.xcassets */; };
 		3FD9A00421AE813100C7B4AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9A00221AE813100C7B4AC /* LaunchScreen.storyboard */; };
 		3FDEDC9321AE931E007F236A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */; };
-		3FDEDC9721AE97C0007F236A /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEDC9621AE97C0007F236A /* EmailViewController.swift */; };
 		D94EE5BA99AA95DAA522F5EC /* Pods_Opdracht6_veiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE65EE5EB34FFB262E1E8A3 /* Pods_Opdracht6_veiling.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +29,12 @@
 		3F01C0B821AFDC1B0000957B /* bids.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bids.jpg; sourceTree = "<group>"; };
 		3F01C0BA21AFDD160000957B /* Bids2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bids2.png; sourceTree = "<group>"; };
 		3F01C0C121AFEA910000957B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3F33448621B7BF89002767DA /* RegistrationValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationValidation.swift; sourceTree = "<group>"; };
+		3F33448821B7BFE8002767DA /* RegistrationValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationValidationProtocol.swift; sourceTree = "<group>"; };
+		3F33448A21B7C02A002767DA /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3F33448C21B7D17F002767DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F33449021B7D21A002767DA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
+		3F33449421B7D240002767DA /* LoginValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationProtocol.swift; sourceTree = "<group>"; };
 		3FD99FF621AE812E00C7B4AC /* Opdracht6_veiling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opdracht6_veiling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD99FF921AE812E00C7B4AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD99FFB21AE812E00C7B4AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,7 +43,6 @@
 		3FD9A00321AE813100C7B4AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD9A00521AE813100C7B4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3FDEDC9621AE97C0007F236A /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		98F80464799348779D744A1C /* Pods-Opdracht6_veiling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6_veiling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling.debug.xcconfig"; sourceTree = "<group>"; };
 		ECE65EE5EB34FFB262E1E8A3 /* Pods_Opdracht6_veiling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Opdracht6_veiling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC949278B7FFEE1FD957BFC /* Pods-Opdracht6_veiling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6_veiling.release.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +72,7 @@
 		3F01C0BD21AFEA230000957B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F33448A21B7C02A002767DA /* Login.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -76,8 +87,28 @@
 		3F01C0BF21AFEA460000957B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				3F33449321B7D229002767DA /* Login */,
+				3F33449221B7D21F002767DA /* Registration */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3F33449221B7D21F002767DA /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				3F33448621B7BF89002767DA /* RegistrationValidation.swift */,
+				3F33448821B7BFE8002767DA /* RegistrationValidationProtocol.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		3F33449321B7D229002767DA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F33449021B7D21A002767DA /* LoginValidation.swift */,
+				3F33449421B7D240002767DA /* LoginValidationProtocol.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		3FD99FED21AE812E00C7B4AC = {
@@ -112,8 +143,8 @@
 				3FD9A00021AE813100C7B4AC /* Assets.xcassets */,
 				3FD9A00221AE813100C7B4AC /* LaunchScreen.storyboard */,
 				3FD9A00521AE813100C7B4AC /* Info.plist */,
-				3FDEDC9621AE97C0007F236A /* EmailViewController.swift */,
 				3F01C0C121AFEA910000957B /* RegisterViewController.swift */,
+				3F33448C21B7D17F002767DA /* LoginViewController.swift */,
 			);
 			path = Opdracht6_veiling;
 			sourceTree = "<group>";
@@ -268,8 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F33449521B7D240002767DA /* LoginValidationProtocol.swift in Sources */,
+				3F33448B21B7C02A002767DA /* Login.swift in Sources */,
 				3FD99FFC21AE812E00C7B4AC /* ViewController.swift in Sources */,
-				3FDEDC9721AE97C0007F236A /* EmailViewController.swift in Sources */,
+				3F33448921B7BFE8002767DA /* RegistrationValidationProtocol.swift in Sources */,
+				3F33448D21B7D17F002767DA /* LoginViewController.swift in Sources */,
+				3F33449121B7D21A002767DA /* LoginValidation.swift in Sources */,
+				3F33448721B7BF89002767DA /* RegistrationValidation.swift in Sources */,
 				3FD99FFA21AE812E00C7B4AC /* AppDelegate.swift in Sources */,
 				3F01C0C221AFEA910000957B /* RegisterViewController.swift in Sources */,
 			);

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Email View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EmailViewController" customModule="Opdracht6_veiling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Opdracht6_veiling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,7 @@
                                 <rect key="frame" x="326" y="826" width="408" height="66"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-OO-pPB">
                                 <rect key="frame" x="100" y="965" width="261.5" height="77"/>
@@ -96,6 +96,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="t9c-gW-a1u" kind="show" id="0iL-e2-EZX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f35-ha-tkO">
                                 <rect key="frame" x="472.5" y="965" width="261.5" height="77"/>
@@ -110,17 +113,35 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="clickedSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQ5-wV-PPa"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVh-GB-CoW">
+                                <rect key="frame" x="50" y="1038" width="734" height="49"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99898958333333332" green="0.99898958333333332" blue="0.99898958333333332" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="DevanagariSangamMN-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4vc-uB-nob" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1ju-tp-j5O"/>
                             <constraint firstItem="gFf-OO-pPB" firstAttribute="width" secondItem="f35-ha-tkO" secondAttribute="width" id="6i8-OS-jjt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kVh-GB-CoW" secondAttribute="trailing" constant="50" id="7Px-4q-I8P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gFf-OO-pPB" secondAttribute="bottom" constant="70" id="8Pf-HF-AHJ"/>
                             <constraint firstItem="dXg-Ea-u3H" firstAttribute="height" secondItem="WYn-Le-gDz" secondAttribute="height" id="9wu-BW-VC6"/>
                             <constraint firstItem="dXg-Ea-u3H" firstAttribute="top" secondItem="RAD-Lb-vmB" secondAttribute="bottom" constant="83" id="9xB-ga-I3b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f35-ha-tkO" secondAttribute="trailing" constant="100" id="AG9-pz-Q6x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f35-ha-tkO" secondAttribute="bottom" constant="70" id="IZH-IW-fvl"/>
+                            <constraint firstItem="kVh-GB-CoW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Kee-9N-42V"/>
                             <constraint firstItem="f35-ha-tkO" firstAttribute="leading" secondItem="gFf-OO-pPB" secondAttribute="trailing" constant="111" id="NA2-dH-SUo"/>
                             <constraint firstItem="RAD-Lb-vmB" firstAttribute="top" secondItem="4vc-uB-nob" secondAttribute="bottom" constant="-4" id="OhI-7G-MYh"/>
                             <constraint firstItem="gFf-OO-pPB" firstAttribute="top" secondItem="2MU-HN-jyT" secondAttribute="bottom" constant="73" id="RM9-Rq-Q8V"/>
@@ -135,6 +156,7 @@
                             <constraint firstItem="gFf-OO-pPB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="hE9-4Z-vNz"/>
                             <constraint firstItem="4vc-uB-nob" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hqx-27-Gce"/>
                             <constraint firstItem="2MU-HN-jyT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="nmL-fi-xTp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kVh-GB-CoW" secondAttribute="bottom" constant="25" id="qgo-ve-hmm"/>
                             <constraint firstItem="WYn-Le-gDz" firstAttribute="top" secondItem="dXg-Ea-u3H" secondAttribute="top" id="vt5-WW-VR4"/>
                             <constraint firstItem="dXg-Ea-u3H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="xRF-gI-oed"/>
                             <constraint firstItem="DUS-Ug-cj6" firstAttribute="leading" secondItem="2MU-HN-jyT" secondAttribute="trailing" constant="30" id="xiX-gh-tqD"/>
@@ -150,6 +172,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2UU-Fq-iXi"/>
+                    <connections>
+                        <outlet property="lbError" destination="kVh-GB-CoW" id="dU9-TL-Mvy"/>
+                        <outlet property="txtEmail" destination="WYn-Le-gDz" id="4o1-TE-ypp"/>
+                        <outlet property="txtPassword" destination="DUS-Ug-cj6" id="T8W-8k-riJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +191,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAa-4e-bh6">
-                                <rect key="frame" x="0.0" y="20" width="834" height="158"/>
+                                <rect key="frame" x="0.0" y="70" width="834" height="158"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="158" id="NXu-0c-qTX"/>
@@ -181,7 +208,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-K3-7W4">
-                                <rect key="frame" x="74" y="227" width="115.5" height="65.5"/>
+                                <rect key="frame" x="74" y="277" width="123.5" height="65.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Email">
                                         <attributes>
@@ -193,13 +220,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRx-7W-05A">
-                                <rect key="frame" x="299" y="227" width="408.5" height="65.5"/>
+                                <rect key="frame" x="307" y="277" width="400.5" height="65.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKh-5F-3ga">
-                                <rect key="frame" x="74" y="321" width="210" height="66"/>
+                                <rect key="frame" x="74" y="371" width="218" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Username">
                                         <attributes>
@@ -212,32 +239,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZq-Rm-mZ3">
-                                <rect key="frame" x="300" y="321" width="408.5" height="65.5"/>
+                                <rect key="frame" x="308" y="371" width="400.5" height="65.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkl-Iv-MKi">
-                                <rect key="frame" x="74" y="423" width="188" height="66"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Birthdate">
-                                        <attributes>
-                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-uq-kpA">
-                                <rect key="frame" x="300" y="423" width="408.5" height="65.5"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-U2-Hnl">
-                                <rect key="frame" x="73" y="523" width="196" height="66"/>
+                                <rect key="frame" x="74" y="473" width="196" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Password">
                                         <attributes>
@@ -249,14 +257,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RA2-7b-qCe">
-                                <rect key="frame" x="299" y="523" width="408.5" height="65.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-uq-kpA">
+                                <rect key="frame" x="308" y="473" width="400.5" height="65.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-IZ-lqH">
-                                <rect key="frame" x="73" y="625" width="148" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-U2-Hnl">
+                                <rect key="frame" x="73" y="573" width="204" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Repeat">
                                         <attributes>
@@ -268,12 +276,25 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxb-9V-V4Y">
-                                <rect key="frame" x="299" y="625" width="408.5" height="65.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RA2-7b-qCe">
+                                <rect key="frame" x="307" y="573" width="400.5" height="65.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-IZ-lqH">
+                                <rect key="frame" x="73" y="675" width="202" height="66"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Birthdate">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="DevanagariSangamMN-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWf-vv-BhA">
                                 <rect key="frame" x="101" y="880" width="261.5" height="77"/>
                                 <state key="normal">
@@ -301,32 +322,55 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="clickedRegister:" destination="t9c-gW-a1u" eventType="touchUpInside" id="r43-OY-Wfq"/>
+                                </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EwT-rV-5pc">
+                                <rect key="frame" x="307.5" y="646" width="400.5" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="565689795.91768098">
+                                    <!--2018-12-05 08:03:15 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF7-NK-SoX">
+                                <rect key="frame" x="50" y="1013" width="734" height="49"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="DevanagariSangamMN-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ICC-O0-Z7Y" firstAttribute="bottom" secondItem="EmD-p7-iCp" secondAttribute="bottom" constant="155" id="0Pc-4p-WV8"/>
-                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="Hxb-9V-V4Y" secondAttribute="trailing" constant="126.5" id="0jK-87-cG6"/>
-                            <constraint firstItem="SeS-IZ-lqH" firstAttribute="top" secondItem="Hxb-9V-V4Y" secondAttribute="top" id="3bc-Ng-V6s"/>
                             <constraint firstItem="kKh-5F-3ga" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="74" id="7tW-fb-jxx"/>
                             <constraint firstItem="kKh-5F-3ga" firstAttribute="top" secondItem="0m5-K3-7W4" secondAttribute="bottom" constant="28.5" id="Abe-pg-8yB"/>
                             <constraint firstItem="qAa-4e-bh6" firstAttribute="top" secondItem="ICC-O0-Z7Y" secondAttribute="top" id="Ahz-1R-hyA"/>
-                            <constraint firstItem="Hxb-9V-V4Y" firstAttribute="height" secondItem="JRx-7W-05A" secondAttribute="height" id="BgS-QF-gpJ"/>
+                            <constraint firstItem="qF7-NK-SoX" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="50" id="C6h-Xo-WSi"/>
                             <constraint firstItem="0m5-K3-7W4" firstAttribute="top" secondItem="qAa-4e-bh6" secondAttribute="bottom" constant="49" id="DXX-MT-Bae"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="EwT-rV-5pc" secondAttribute="trailing" constant="126" id="FGL-1z-kiS"/>
+                            <constraint firstItem="EwT-rV-5pc" firstAttribute="leading" secondItem="SeS-IZ-lqH" secondAttribute="trailing" constant="32.5" id="IP4-H1-02C"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="qF7-NK-SoX" secondAttribute="trailing" constant="50" id="IuL-is-Y82"/>
                             <constraint firstItem="RA2-7b-qCe" firstAttribute="width" secondItem="JRx-7W-05A" secondAttribute="width" id="JLN-eg-7cb"/>
                             <constraint firstItem="Msg-U2-Hnl" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="73" id="Jlg-12-8fB"/>
                             <constraint firstItem="Msg-U2-Hnl" firstAttribute="top" secondItem="RA2-7b-qCe" secondAttribute="top" id="K4a-LX-M1R"/>
-                            <constraint firstItem="Hxb-9V-V4Y" firstAttribute="width" secondItem="JRx-7W-05A" secondAttribute="width" id="KWs-Ez-r8t"/>
+                            <constraint firstItem="ICC-O0-Z7Y" firstAttribute="bottom" secondItem="qF7-NK-SoX" secondAttribute="bottom" constant="50" id="LGB-rX-6wD"/>
                             <constraint firstItem="AZq-Rm-mZ3" firstAttribute="height" secondItem="JRx-7W-05A" secondAttribute="height" id="Lpa-b0-yKK"/>
+                            <constraint firstItem="EwT-rV-5pc" firstAttribute="width" secondItem="RA2-7b-qCe" secondAttribute="width" id="N7N-Km-0lx"/>
                             <constraint firstItem="RA2-7b-qCe" firstAttribute="leading" secondItem="Msg-U2-Hnl" secondAttribute="trailing" constant="30" id="NKN-yN-Pci"/>
                             <constraint firstItem="2i1-uq-kpA" firstAttribute="leading" secondItem="qkl-Iv-MKi" secondAttribute="trailing" constant="38" id="OiO-ez-LIM"/>
                             <constraint firstItem="qAa-4e-bh6" firstAttribute="trailing" secondItem="ICC-O0-Z7Y" secondAttribute="trailing" id="Q0H-PZ-AFD"/>
                             <constraint firstItem="qkl-Iv-MKi" firstAttribute="top" secondItem="ICC-O0-Z7Y" secondAttribute="top" constant="403" id="R3i-0d-H4H"/>
-                            <constraint firstItem="Hxb-9V-V4Y" firstAttribute="leading" secondItem="SeS-IZ-lqH" secondAttribute="trailing" constant="78" id="RKU-9s-WXM"/>
                             <constraint firstItem="0m5-K3-7W4" firstAttribute="leading" secondItem="ICC-O0-Z7Y" secondAttribute="leading" constant="74" id="Smn-8h-UOf"/>
                             <constraint firstItem="qkl-Iv-MKi" firstAttribute="top" secondItem="kKh-5F-3ga" secondAttribute="bottom" constant="36" id="T0L-2d-pcA"/>
                             <constraint firstItem="2i1-uq-kpA" firstAttribute="width" secondItem="JRx-7W-05A" secondAttribute="width" id="Wll-94-2h2"/>
                             <constraint firstItem="AZq-Rm-mZ3" firstAttribute="width" secondItem="JRx-7W-05A" secondAttribute="width" id="YLk-ux-zQ0"/>
+                            <constraint firstItem="EwT-rV-5pc" firstAttribute="top" secondItem="RA2-7b-qCe" secondAttribute="bottom" constant="7.5" id="Z6G-N8-puO"/>
                             <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="AZq-Rm-mZ3" secondAttribute="trailing" constant="125.5" id="aJM-pm-bju"/>
                             <constraint firstItem="ICC-O0-Z7Y" firstAttribute="trailing" secondItem="JRx-7W-05A" secondAttribute="trailing" constant="126.5" id="agH-Vm-2LT"/>
                             <constraint firstItem="RA2-7b-qCe" firstAttribute="height" secondItem="JRx-7W-05A" secondAttribute="height" id="bzP-c3-sfl"/>
@@ -357,10 +401,20 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="oWf-vv-BhA" id="rxf-Mv-Lhj"/>
+                        <outlet property="btnRegister" destination="EmD-p7-iCp" id="Zoc-or-H3K"/>
+                        <outlet property="lbError" destination="qF7-NK-SoX" id="aXQ-bD-lvg"/>
+                        <outlet property="pvDob" destination="EwT-rV-5pc" id="7BX-W6-QMo"/>
+                        <outlet property="txtEmail" destination="JRx-7W-05A" id="nDo-ER-RLE"/>
+                        <outlet property="txtPassword" destination="2i1-uq-kpA" id="BFK-RW-6fe"/>
+                        <outlet property="txtPasswordRepeat" destination="RA2-7b-qCe" id="khQ-Vi-swO"/>
+                        <outlet property="txtUsername" destination="AZq-Rm-mZ3" id="kDO-G6-ABN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHG-2I-4YQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1412" y="14"/>
+            <point key="canvasLocation" x="1411.5107913669067" y="13.489208633093526"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F9i-QK-WgV">
