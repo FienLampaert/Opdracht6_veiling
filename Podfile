@@ -9,4 +9,5 @@ target 'Opdracht6_veiling' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'FBSDKLoginKit'
+pod 'Firebase/Firestore'
 end

@@ -12,10 +12,12 @@ class Login {
     
     var email: String
     var password: String
-    
-    init(email:String, password:String) {
+    var uId: String
+        
+    init(email:String, password:String, uId:String) {
         self.email = email
         self.password = password
+        self.uId = uId
     }
     
     func getEmail() -> String {

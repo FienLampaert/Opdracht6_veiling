@@ -35,11 +35,11 @@ class LoginValidation{
     
     static func signIn(email:String, password: String, listener:LoginValidationProtocol) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if(error != nil) {
-                listener.loginCompleted(login: nil, error: error?.localizedDescription)
+            if let e = error {
+                listener.loginCompleted(login: nil, error: e.localizedDescription)
             }
-            if(user != nil) {
-                let login:Login = Login(email: email, password: password)
+            if let u = user {
+                let login:Login = Login(email: email, password: password, uId:u.user.uid)
                 listener.loginCompleted(login: login, error: nil)
             }
         }

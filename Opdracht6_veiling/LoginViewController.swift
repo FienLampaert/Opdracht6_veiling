@@ -48,7 +48,7 @@ class LoginViewController: UIViewController, LoginValidationProtocol {
     }
     
     func loginCompleted(login: Login?, error: String?) {
-        lbError.text = error
+        lbError.text = error ?? ""
     }
     
 }

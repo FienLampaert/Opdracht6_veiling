@@ -24,8 +24,6 @@ class RegisterViewController: UIViewController , RegistrationValidationProtocol 
     //labels
     @IBOutlet weak var lbError: UILabel!
     
-    //fields
-    var registrationValidation = RegistrationValidation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +46,21 @@ class RegisterViewController: UIViewController , RegistrationValidationProtocol 
     
     
     func registrationCompleted(login: Login?, error: String?) {
-        lbError.text = error
+        if let l = login {
+            let result = RegistrationValidation.addMember(login: l, name: txtUsername.text ?? "", birthDate: pvDob.date)
+            if(!result.isEmpty){
+                lbError.text = result
+            }
+            else {
+                lbError.text =  ""
+                giveLoginDataToRoot(login:l)
+            }
+        } else {
+            lbError.text = error ?? ""
+        }
     }
     
+    func giveLoginDataToRoot(login:Login) {
+        self.navigationController?.viewControllers[0] as! RootVCProtocol.setLogin(login:login!)
+    }
 }

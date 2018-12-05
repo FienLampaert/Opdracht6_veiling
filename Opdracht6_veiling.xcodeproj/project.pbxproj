@@ -22,6 +22,10 @@
 		3FD9A00121AE813100C7B4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9A00021AE813100C7B4AC /* Assets.xcassets */; };
 		3FD9A00421AE813100C7B4AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9A00221AE813100C7B4AC /* LaunchScreen.storyboard */; };
 		3FDEDC9321AE931E007F236A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */; };
+		D88EBF2A21B7EAC70066B3C4 /* Bid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EBF2921B7EAC70066B3C4 /* Bid.swift */; };
+		D88EBF2C21B7EC7E0066B3C4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EBF2B21B7EC7E0066B3C4 /* Member.swift */; };
+		D88EBF2E21B7EDDD0066B3C4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EBF2D21B7EDDD0066B3C4 /* Article.swift */; };
+		D88EBF3121B80CD70066B3C4 /* RootVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EBF3021B80CD70066B3C4 /* RootVCProtocol.swift */; };
 		D94EE5BA99AA95DAA522F5EC /* Pods_Opdracht6_veiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE65EE5EB34FFB262E1E8A3 /* Pods_Opdracht6_veiling.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +48,10 @@
 		3FD9A00521AE813100C7B4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98F80464799348779D744A1C /* Pods-Opdracht6_veiling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6_veiling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling.debug.xcconfig"; sourceTree = "<group>"; };
+		D88EBF2921B7EAC70066B3C4 /* Bid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bid.swift; sourceTree = "<group>"; };
+		D88EBF2B21B7EC7E0066B3C4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		D88EBF2D21B7EDDD0066B3C4 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		D88EBF3021B80CD70066B3C4 /* RootVCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVCProtocol.swift; sourceTree = "<group>"; };
 		ECE65EE5EB34FFB262E1E8A3 /* Pods_Opdracht6_veiling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Opdracht6_veiling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC949278B7FFEE1FD957BFC /* Pods-Opdracht6_veiling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6_veiling.release.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				3F33448A21B7C02A002767DA /* Login.swift */,
+				D88EBF2921B7EAC70066B3C4 /* Bid.swift */,
+				D88EBF2B21B7EC7E0066B3C4 /* Member.swift */,
+				D88EBF2D21B7EDDD0066B3C4 /* Article.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -80,6 +91,8 @@
 		3F01C0BE21AFEA360000957B /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				D88EBF2621B7E9D30066B3C4 /* Registration */,
+				D88EBF2521B7E9B80066B3C4 /* Login */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -87,8 +100,6 @@
 		3F01C0BF21AFEA460000957B /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3F33449321B7D229002767DA /* Login */,
-				3F33449221B7D21F002767DA /* Registration */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -96,7 +107,6 @@
 		3F33449221B7D21F002767DA /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				3F33448621B7BF89002767DA /* RegistrationValidation.swift */,
 				3F33448821B7BFE8002767DA /* RegistrationValidationProtocol.swift */,
 			);
 			path = Registration;
@@ -105,7 +115,6 @@
 		3F33449321B7D229002767DA /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3F33449021B7D21A002767DA /* LoginValidation.swift */,
 				3F33449421B7D240002767DA /* LoginValidationProtocol.swift */,
 			);
 			path = Login;
@@ -132,6 +141,7 @@
 		3FD99FF821AE812E00C7B4AC /* Opdracht6_veiling */ = {
 			isa = PBXGroup;
 			children = (
+				D88EBF2F21B80C900066B3C4 /* Extra */,
 				3F01C0BF21AFEA460000957B /* Service */,
 				3F01C0BE21AFEA360000957B /* Storage */,
 				3F01C0BD21AFEA230000957B /* Models */,
@@ -166,6 +176,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D88EBF2521B7E9B80066B3C4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F33449021B7D21A002767DA /* LoginValidation.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D88EBF2621B7E9D30066B3C4 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				3F33448621B7BF89002767DA /* RegistrationValidation.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		D88EBF2F21B80C900066B3C4 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				3F33449221B7D21F002767DA /* Registration */,
+				3F33449321B7D229002767DA /* Login */,
+				D88EBF3021B80CD70066B3C4 /* RootVCProtocol.swift */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +214,7 @@
 				3FD99FF321AE812E00C7B4AC /* Frameworks */,
 				3FD99FF421AE812E00C7B4AC /* Resources */,
 				A26B82BAB4A236BDA86E0321 /* [CP] Embed Pods Frameworks */,
+				EEBEA23C6AD3D2E6D06F3B9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,10 +307,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -281,15 +323,42 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEBEA23C6AD3D2E6D06F3B9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -304,10 +373,14 @@
 				3FD99FFC21AE812E00C7B4AC /* ViewController.swift in Sources */,
 				3F33448921B7BFE8002767DA /* RegistrationValidationProtocol.swift in Sources */,
 				3F33448D21B7D17F002767DA /* LoginViewController.swift in Sources */,
+				D88EBF2A21B7EAC70066B3C4 /* Bid.swift in Sources */,
 				3F33449121B7D21A002767DA /* LoginValidation.swift in Sources */,
 				3F33448721B7BF89002767DA /* RegistrationValidation.swift in Sources */,
+				D88EBF3121B80CD70066B3C4 /* RootVCProtocol.swift in Sources */,
+				D88EBF2E21B7EDDD0066B3C4 /* Article.swift in Sources */,
 				3FD99FFA21AE812E00C7B4AC /* AppDelegate.swift in Sources */,
 				3F01C0C221AFEA910000957B /* RegisterViewController.swift in Sources */,
+				D88EBF2C21B7EC7E0066B3C4 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

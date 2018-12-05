@@ -7,9 +7,13 @@
 //
 
 import Foundation
+import FirebaseFirestore
 import FirebaseAuth
 
 class RegistrationValidation{
+    
+    static let db = Firestore.firestore()
+    static let dateFormat = DateFormatter()
     
     static func validate (name: String, email:String, password:String, passwordValidation:String, birthDate:Date, listener:RegistrationValidationProtocol) {
         var validationOK = true
@@ -61,12 +65,31 @@ class RegistrationValidation{
                 listener.registrationCompleted(login: nil, error: error?.localizedDescription)
             }
             if(authResult != nil) {
-                let login:Login = Login(email: email, password: password)
+                let login:Login = Login(email: email, password: password, uId:authResult?.user.uid ?? "")
                 listener.registrationCompleted(login: login, error: nil)
             }
             //print("authResult " + authResult.debugDescription)
             guard let user = authResult?.user else { return }
         }
+    }
+    
+    static func addMember(login:Login, name:String, birthDate:Date) -> String {
+        var errorReturn:String = ""
+        dateFormat.dateFormat = "yyy-MM-dd"
+        let dobString = dateFormat.string(from: birthDate)
+        
+        db.collection("Members").addDocument(data: [
+            "birthDate" : dobString,
+            "name" : name,
+            "uId" : login.uId])
+        {
+            err in if let error = err {
+                errorReturn = error.localizedDescription
+            }else {
+                errorReturn = ""
+            }
+        }
+        return errorReturn
     }
 }
 
