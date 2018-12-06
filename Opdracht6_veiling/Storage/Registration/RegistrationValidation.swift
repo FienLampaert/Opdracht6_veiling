@@ -75,11 +75,9 @@ class RegistrationValidation{
     
     static func addMember(login:Login, name:String, birthDate:Date) -> String {
         var errorReturn:String = ""
-        dateFormat.dateFormat = "yyy-MM-dd"
-        let dobString = dateFormat.string(from: birthDate)
         
         db.collection("Members").addDocument(data: [
-            "birthDate" : dobString,
+            "birthDate" : birthDate,
             "name" : name,
             "uId" : login.uId])
         {

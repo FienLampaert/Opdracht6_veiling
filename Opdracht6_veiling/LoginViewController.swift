@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, LoginValidationProtocol {
+class LoginViewController: UIViewController, LoginValidationProtocol, RootVCProtocol {
     
     
     
@@ -51,11 +51,13 @@ class LoginViewController: UIViewController, LoginValidationProtocol {
         lbError.text = error ?? ""
         
         if let l = login {
-            navigateTest()
+            navigateToTable(login: l)
         }
     }
     
-    func navigateTest(){
+    
+    
+    func navigateToTable(login: Login){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "bidsTableViewController") as! BidsTableViewController
         self.present(vc, animated: true, completion: nil)

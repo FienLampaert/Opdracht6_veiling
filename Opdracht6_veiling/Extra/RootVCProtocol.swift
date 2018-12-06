@@ -9,5 +9,7 @@
 import Foundation
 
 protocol RootVCProtocol {
-    func setLogin(login:Login)
+   
+    func navigateToTable(login: Login)
+    
 }

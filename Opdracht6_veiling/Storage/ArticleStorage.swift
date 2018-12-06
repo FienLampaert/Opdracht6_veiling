@@ -17,18 +17,20 @@ class ArticleStorage {
         db = Firestore.firestore()
     }
     
-    func getAll() -> [QueryDocumentSnapshot] {
-        var articles:[QueryDocumentSnapshot] = []
+    func getAll(listener: ArticleStorageProtocol) {
         db.collection("Articles").getDocuments() { (querySnapShot, err) in
+            var documentArray:[QueryDocumentSnapshot] = []
             if let err = err {
                 print("error")
             } else {
                 for document in querySnapShot!.documents {
-                    articles.append(document)
+                    print(document)
+                    documentArray.append(document)
                 }
-            }
+                listener.setAllDocuments(documents: documentArray)
+            }            
         }
-        return articles
+        
     }
     
 }

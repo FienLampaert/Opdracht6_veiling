@@ -22,6 +22,8 @@
 		3FD9A00121AE813100C7B4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9A00021AE813100C7B4AC /* Assets.xcassets */; };
 		3FD9A00421AE813100C7B4AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9A00221AE813100C7B4AC /* LaunchScreen.storyboard */; };
 		3FDEDC9321AE931E007F236A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */; };
+		3FE11E5521B91E4B00CC668E /* ArticleStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */; };
+		3FE11E5721B91F8B00CC668E /* ArticleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */; };
 		D87FC22221B8358800BD94B8 /* BidsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FC22121B8358800BD94B8 /* BidsTableViewController.swift */; };
 		D87FC22621B83B3A00BD94B8 /* ArticleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FC22521B83B3A00BD94B8 /* ArticleStorage.swift */; };
 		D87FC22821B83DE000BD94B8 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FC22721B83DE000BD94B8 /* ArticleService.swift */; };
@@ -50,6 +52,8 @@
 		3FD9A00321AE813100C7B4AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD9A00521AE813100C7B4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStorageProtocol.swift; sourceTree = "<group>"; };
+		3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleServiceProtocol.swift; sourceTree = "<group>"; };
 		98F80464799348779D744A1C /* Pods-Opdracht6_veiling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6_veiling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling.debug.xcconfig"; sourceTree = "<group>"; };
 		D87FC22121B8358800BD94B8 /* BidsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsTableViewController.swift; sourceTree = "<group>"; };
 		D87FC22521B83B3A00BD94B8 /* ArticleStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStorage.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				D88EBF2621B7E9D30066B3C4 /* Registration */,
 				D88EBF2521B7E9B80066B3C4 /* Login */,
 				D87FC22521B83B3A00BD94B8 /* ArticleStorage.swift */,
+				3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				D87FC22721B83DE000BD94B8 /* ArticleService.swift */,
+				3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -386,8 +392,10 @@
 				3F33448D21B7D17F002767DA /* LoginViewController.swift in Sources */,
 				D88EBF2A21B7EAC70066B3C4 /* Bid.swift in Sources */,
 				3F33449121B7D21A002767DA /* LoginValidation.swift in Sources */,
+				3FE11E5521B91E4B00CC668E /* ArticleStorageProtocol.swift in Sources */,
 				3F33448721B7BF89002767DA /* RegistrationValidation.swift in Sources */,
 				D88EBF3121B80CD70066B3C4 /* RootVCProtocol.swift in Sources */,
+				3FE11E5721B91F8B00CC668E /* ArticleServiceProtocol.swift in Sources */,
 				D88EBF2E21B7EDDD0066B3C4 /* Article.swift in Sources */,
 				3FD99FFA21AE812E00C7B4AC /* AppDelegate.swift in Sources */,
 				D87FC22621B83B3A00BD94B8 /* ArticleStorage.swift in Sources */,

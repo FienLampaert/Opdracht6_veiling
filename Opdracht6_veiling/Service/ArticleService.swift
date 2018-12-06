@@ -7,27 +7,21 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
-class ArticleService {
+class ArticleService: ArticleStorageProtocol {
     
+    var listener:ArticleServiceProtocol?
     let articleStorage:ArticleStorage
     
     init() {
         articleStorage = ArticleStorage()
     }
     
-    func getAll() -> [Article] {
-        var documents = articleStorage.getAll();
-        var articles:[Article] = []
+    func getAll(listener: ArticleServiceProtocol)  {
+        articleStorage.getAll(listener: self);
+        self.listener = listener
         
-        for document in documents {
-            let number:CFNumber = document.data()["minBid"] as! CFNumber
-            
-            let a = Article(id: document.documentID, description: document.data()["description"] as! String, minBid: floatToDouble(number: number), bids: nil)
-            
-            articles.append(a)
-        }
-        return articles
     }
     
     func floatToDouble(number:CFNumber) -> Double {
@@ -37,5 +31,18 @@ class ArticleService {
         } else {
             return 0
         }
+    }
+    
+    func setAllDocuments(documents: [QueryDocumentSnapshot]) {
+        var articles:[Article] = []
+        
+        for document in documents {
+            let number:CFNumber = document.data()["minBid"] as! CFNumber
+            
+            let a:Article = Article(id: document.documentID, description: document.data()["description"] as! String, minBid: floatToDouble(number: number), bids: nil)
+            
+            articles.append(a)
+        }
+        listener?.setAllArticles(articles: articles)
     }
 }
