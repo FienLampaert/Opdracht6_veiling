@@ -53,7 +53,8 @@ class RegisterViewController: UIViewController , RegistrationValidationProtocol 
             }
             else {
                 lbError.text =  ""
-                giveLoginDataToRoot(login:l)
+                (self.navigationController?.viewControllers[0] as! RootVCProtocol).navigateToTable(login:l)
+                self.navigationController?.popViewController(animated: true)
             }
         } else {
             lbError.text = error ?? ""
