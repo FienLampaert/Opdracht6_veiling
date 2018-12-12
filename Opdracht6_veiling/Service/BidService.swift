@@ -18,7 +18,7 @@ class BidService: BidStorageProtocol {
         bidStorage = BidStorage()
     }
     
-    func getBid(article:Article, listener: BidServiceProtocol)  {
+    func getBids(article:Article, listener: BidServiceProtocol)  {
         bidStorage.getBids(article: article, listener: self)
         self.listener = listener
         

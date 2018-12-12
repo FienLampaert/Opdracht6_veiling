@@ -24,7 +24,6 @@ class ArticleStorage {
                 print("error")
             } else {
                 for document in querySnapShot!.documents {
-                    print(document)
                     documentArray.append(document)
                 }
                 listener.setAllDocuments(documents: documentArray)

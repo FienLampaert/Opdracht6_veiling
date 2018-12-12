@@ -10,7 +10,6 @@ import UIKit
 
 class BidsTableViewController: UITableViewController, ArticleServiceProtocol, BidServiceProtocol {
     
-    
     var articles = [Article]()
     let articleService = ArticleService()
     let bidService = BidService()
@@ -18,7 +17,7 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        getBidsOfArticle()
+        //getBidsOfArticle()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,12 +30,10 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleTableViewCell
-        print("ja")
         let article = articles[indexPath.row]
         cell.cellTitle?.text = article.description
-        print(article.description)
-        print(articles.count)
         
         if(article.bids.count == 0) {
             cell.cellSubTitle?.text = "Startbedrag: " + String(article.minBid)
@@ -60,16 +57,25 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
     
     func getBidsOfArticle() {
         for article in articles {
-            bidService.getBid(article: article, listener: self)
+            bidService.getBids(article: article, listener: self)
         }
     }
     
     func setAllArticles(articles: [Article]) {
         self.articles = articles
         self.tableView.reloadData()
+        getBidsOfArticle()
     }
     
-    func setBid(article: Article, bid: Bid) {
+    func setBids(article: Article, bids: [Bid]) {
+        print(article.getBids().count)
+        article.setBids(bids: bids)
+        let row = self.articles.firstIndex { (art) -> Bool in
+            return art.id == article.id
+        }
+        let indexPath:IndexPath = IndexPath(row: row ?? 0, section: 0)
+        let indexPaths: [IndexPath] = [indexPath]
         self.tableView.reloadRows(at: indexPaths, with: UITableView.RowAnimation.left)
+        
     }
 }
