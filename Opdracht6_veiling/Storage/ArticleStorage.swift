@@ -19,7 +19,7 @@ class ArticleStorage {
     
     func getAll(listener: ArticleStorageProtocol) {
         db.collection("Articles").getDocuments() { (querySnapShot, err) in
-            var documentArray:[QueryDocumentSnapshot] = []
+            var documentArray=[QueryDocumentSnapshot]()
             if let err = err {
                 print("error")
             } else {

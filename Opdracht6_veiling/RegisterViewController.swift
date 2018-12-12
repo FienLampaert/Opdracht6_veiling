@@ -61,13 +61,14 @@ class RegisterViewController: UIViewController , RegistrationValidationProtocol 
         }
     }
     
-    func giveLoginDataToRoot(login:Login) {
-        //self.navigationController?.viewControllers[0] as! RootVCProtocol.setLogin(login:login!)
-    }
-    
-    func navigateTest(){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "BidsTableViewController") as! BidsTableViewController
-        self.present(vc, animated: true, completion: nil)
-    }
+//    func giveLoginDataToRoot(login:Login) {
+//        self.navigationController?.viewControllers[0] as! RootVCProtocol.setLogin(login:login!)
+//    }
+//
+//    func navigateTest(){
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let vc = storyBoard.instantiateViewController(withIdentifier: "BidsTableViewController") as! BidsTableViewController
+//        vc.setContent(Login:login)
+//        self.present(vc, animated: true, completion: nil)
+//    }
 }

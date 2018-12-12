@@ -13,6 +13,7 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
     var articles = [Article]()
     let articleService = ArticleService()
     let bidService = BidService()
+    let login:Login()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,10 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
         //getBidsOfArticle()
     }
 
+    func setContent(login:Login) {
+        self.login = login
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -77,5 +82,15 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
         let indexPaths: [IndexPath] = [indexPath]
         self.tableView.reloadRows(at: indexPaths, with: UITableView.RowAnimation.left)
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        bidService.close()
+    }
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier:"vcDetail") as! DetailViewController
+        vc.setContent(article:articles[indexPath.row], login:self.login)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

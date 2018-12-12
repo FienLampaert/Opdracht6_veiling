@@ -16,6 +16,7 @@
 		3F33448D21B7D17F002767DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33448C21B7D17F002767DA /* LoginViewController.swift */; };
 		3F33449121B7D21A002767DA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33449021B7D21A002767DA /* LoginValidation.swift */; };
 		3F33449521B7D240002767DA /* LoginValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33449421B7D240002767DA /* LoginValidationProtocol.swift */; };
+		3F7E776021C10A0D007D382E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E775F21C10A0D007D382E /* DetailViewController.swift */; };
 		3FD99FFA21AE812E00C7B4AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD99FF921AE812E00C7B4AC /* AppDelegate.swift */; };
 		3FD99FFC21AE812E00C7B4AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD99FFB21AE812E00C7B4AC /* ViewController.swift */; };
 		3FD99FFF21AE812E00C7B4AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD99FFD21AE812E00C7B4AC /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		3F33448C21B7D17F002767DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F33449021B7D21A002767DA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		3F33449421B7D240002767DA /* LoginValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationProtocol.swift; sourceTree = "<group>"; };
+		3F7E775F21C10A0D007D382E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3FD99FF621AE812E00C7B4AC /* Opdracht6_veiling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opdracht6_veiling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD99FF921AE812E00C7B4AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD99FFB21AE812E00C7B4AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				3F33448C21B7D17F002767DA /* LoginViewController.swift */,
 				D87FC22121B8358800BD94B8 /* BidsTableViewController.swift */,
 				D837B1CC21B995D800BBE66E /* ArticleTableViewCell.swift */,
+				3F7E775F21C10A0D007D382E /* DetailViewController.swift */,
 			);
 			path = Opdracht6_veiling;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				3F33449121B7D21A002767DA /* LoginValidation.swift in Sources */,
 				3FE11E5521B91E4B00CC668E /* ArticleStorageProtocol.swift in Sources */,
 				3F33448721B7BF89002767DA /* RegistrationValidation.swift in Sources */,
+				3F7E776021C10A0D007D382E /* DetailViewController.swift in Sources */,
 				D88EBF3121B80CD70066B3C4 /* RootVCProtocol.swift in Sources */,
 				3FE11E5721B91F8B00CC668E /* ArticleServiceProtocol.swift in Sources */,
 				D88EBF2E21B7EDDD0066B3C4 /* Article.swift in Sources */,

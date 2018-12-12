@@ -60,6 +60,7 @@ class LoginViewController: UIViewController, LoginValidationProtocol, RootVCProt
     func navigateToTable(login: Login){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "bidsTableViewController") as! BidsTableViewController
+        vc.setContent(Login:login)
         self.present(vc, animated: true, completion: nil)
     }
     

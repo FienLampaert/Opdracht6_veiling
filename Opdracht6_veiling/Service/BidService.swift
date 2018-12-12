@@ -45,4 +45,8 @@ class BidService: BidStorageProtocol {
             return 0
         }
     }
+    
+    func close() {
+        bidStorage.close()
+    }
 }
