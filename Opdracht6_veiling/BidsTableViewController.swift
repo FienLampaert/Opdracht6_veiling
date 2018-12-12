@@ -8,14 +8,17 @@
 
 import UIKit
 
-class BidsTableViewController: UITableViewController, ArticleServiceProtocol {
+class BidsTableViewController: UITableViewController, ArticleServiceProtocol, BidServiceProtocol {
+    
     
     var articles = [Article]()
     let articleService = ArticleService()
+    let bidService = BidService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
+        getBidsOfArticle()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,9 +31,25 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleTableViewCell
+        print("ja")
+        let article = articles[indexPath.row]
+        cell.cellTitle?.text = article.description
+        print(article.description)
+        print(articles.count)
         
-        cell.textLabel?.text = articles[indexPath.row].description
+        if(article.bids.count == 0) {
+            cell.cellSubTitle?.text = "Startbedrag: " + String(article.minBid)
+        } else {
+            var highestBid:Double = 0
+            for var bid in article.bids {
+                if(highestBid < bid.bid) {
+                    highestBid = bid.bid
+                }
+            }
+            cell.cellSubTitle?.text = "Hoogste bod: " + String(highestBid)
+        }
+        
 
         return cell
     }
@@ -39,8 +58,18 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol {
         articleService.getAll(listener:self)
     }
     
+    func getBidsOfArticle() {
+        for article in articles {
+            bidService.getBid(article: article, listener: self)
+        }
+    }
+    
     func setAllArticles(articles: [Article]) {
         self.articles = articles
         self.tableView.reloadData()
+    }
+    
+    func setBid(article: Article, bid: Bid) {
+        self.tableView.reloadRows(at: indexPaths, with: UITableView.RowAnimation.left)
     }
 }

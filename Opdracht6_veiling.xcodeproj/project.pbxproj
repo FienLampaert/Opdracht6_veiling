@@ -24,6 +24,11 @@
 		3FDEDC9321AE931E007F236A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */; };
 		3FE11E5521B91E4B00CC668E /* ArticleStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */; };
 		3FE11E5721B91F8B00CC668E /* ArticleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */; };
+		D837B1CD21B995D800BBE66E /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837B1CC21B995D800BBE66E /* ArticleTableViewCell.swift */; };
+		D837B1CF21B9AA7300BBE66E /* BidStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837B1CE21B9AA7300BBE66E /* BidStorage.swift */; };
+		D837B1D121B9AAD200BBE66E /* BidStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837B1D021B9AAD200BBE66E /* BidStorageProtocol.swift */; };
+		D837B1D321B9ACD500BBE66E /* BidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837B1D221B9ACD500BBE66E /* BidService.swift */; };
+		D837B1D521B9ACE500BBE66E /* BidServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837B1D421B9ACE500BBE66E /* BidServiceProtocol.swift */; };
 		D87FC22221B8358800BD94B8 /* BidsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FC22121B8358800BD94B8 /* BidsTableViewController.swift */; };
 		D87FC22621B83B3A00BD94B8 /* ArticleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FC22521B83B3A00BD94B8 /* ArticleStorage.swift */; };
 		D87FC22821B83DE000BD94B8 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FC22721B83DE000BD94B8 /* ArticleService.swift */; };
@@ -55,6 +60,11 @@
 		3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStorageProtocol.swift; sourceTree = "<group>"; };
 		3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleServiceProtocol.swift; sourceTree = "<group>"; };
 		98F80464799348779D744A1C /* Pods-Opdracht6_veiling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6_veiling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling.debug.xcconfig"; sourceTree = "<group>"; };
+		D837B1CC21B995D800BBE66E /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		D837B1CE21B9AA7300BBE66E /* BidStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidStorage.swift; sourceTree = "<group>"; };
+		D837B1D021B9AAD200BBE66E /* BidStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidStorageProtocol.swift; sourceTree = "<group>"; };
+		D837B1D221B9ACD500BBE66E /* BidService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidService.swift; sourceTree = "<group>"; };
+		D837B1D421B9ACE500BBE66E /* BidServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidServiceProtocol.swift; sourceTree = "<group>"; };
 		D87FC22121B8358800BD94B8 /* BidsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsTableViewController.swift; sourceTree = "<group>"; };
 		D87FC22521B83B3A00BD94B8 /* ArticleStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStorage.swift; sourceTree = "<group>"; };
 		D87FC22721B83DE000BD94B8 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
@@ -105,6 +115,8 @@
 				D88EBF2521B7E9B80066B3C4 /* Login */,
 				D87FC22521B83B3A00BD94B8 /* ArticleStorage.swift */,
 				3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */,
+				D837B1CE21B9AA7300BBE66E /* BidStorage.swift */,
+				D837B1D021B9AAD200BBE66E /* BidStorageProtocol.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -114,6 +126,8 @@
 			children = (
 				D87FC22721B83DE000BD94B8 /* ArticleService.swift */,
 				3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */,
+				D837B1D221B9ACD500BBE66E /* BidService.swift */,
+				D837B1D421B9ACE500BBE66E /* BidServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -170,6 +184,7 @@
 				3F01C0C121AFEA910000957B /* RegisterViewController.swift */,
 				3F33448C21B7D17F002767DA /* LoginViewController.swift */,
 				D87FC22121B8358800BD94B8 /* BidsTableViewController.swift */,
+				D837B1CC21B995D800BBE66E /* ArticleTableViewCell.swift */,
 			);
 			path = Opdracht6_veiling;
 			sourceTree = "<group>";
@@ -387,10 +402,14 @@
 				D87FC22221B8358800BD94B8 /* BidsTableViewController.swift in Sources */,
 				3F33448B21B7C02A002767DA /* Login.swift in Sources */,
 				3FD99FFC21AE812E00C7B4AC /* ViewController.swift in Sources */,
+				D837B1D121B9AAD200BBE66E /* BidStorageProtocol.swift in Sources */,
 				D87FC22821B83DE000BD94B8 /* ArticleService.swift in Sources */,
 				3F33448921B7BFE8002767DA /* RegistrationValidationProtocol.swift in Sources */,
 				3F33448D21B7D17F002767DA /* LoginViewController.swift in Sources */,
+				D837B1CF21B9AA7300BBE66E /* BidStorage.swift in Sources */,
 				D88EBF2A21B7EAC70066B3C4 /* Bid.swift in Sources */,
+				D837B1CD21B995D800BBE66E /* ArticleTableViewCell.swift in Sources */,
+				D837B1D321B9ACD500BBE66E /* BidService.swift in Sources */,
 				3F33449121B7D21A002767DA /* LoginValidation.swift in Sources */,
 				3FE11E5521B91E4B00CC668E /* ArticleStorageProtocol.swift in Sources */,
 				3F33448721B7BF89002767DA /* RegistrationValidation.swift in Sources */,
@@ -400,6 +419,7 @@
 				3FD99FFA21AE812E00C7B4AC /* AppDelegate.swift in Sources */,
 				D87FC22621B83B3A00BD94B8 /* ArticleStorage.swift in Sources */,
 				3F01C0C221AFEA910000957B /* RegisterViewController.swift in Sources */,
+				D837B1D521B9ACE500BBE66E /* BidServiceProtocol.swift in Sources */,
 				D88EBF2C21B7EC7E0066B3C4 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
