@@ -9,12 +9,8 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController, RootVCProtocol {
+class ViewController: UIViewController {
     
-    
-    func setLogin(login: Login) {
-        
-    }
 
     var handle: AuthStateDidChangeListenerHandle?
     

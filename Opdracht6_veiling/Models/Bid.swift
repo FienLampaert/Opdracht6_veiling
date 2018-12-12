@@ -11,11 +11,11 @@ import Foundation
 class Bid {
     
     var id: String
-    var bid: Float
+    var bid: Double
     var date: Date
     var memberId: String
     
-    init(id: String, bid: Float, date: Date, memberId: String) {
+    init(id: String, bid: Double, date: Date, memberId: String) {
         self.id = id
         self.bid = bid
         self.date = date
@@ -26,7 +26,7 @@ class Bid {
         return id
     }
     
-    func getBid() -> Float {
+    func getBid() -> Double {
         return bid
     }
     
@@ -42,7 +42,7 @@ class Bid {
         self.id = id
     }
     
-    func setBid(bid:Float) {
+    func setBid(bid:Double) {
         self.bid = bid
     }
     
