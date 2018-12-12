@@ -8,15 +8,29 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, BidServiceProtocol {
+    
+    
     
     var article:Article?
     var login:Login?
     
+    
+    @IBOutlet weak var lbWelcome: UILabel!
+    
+    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var txtMinBid: UITextField!
+    @IBOutlet weak var txtHighestBid: UITextField!
+    
+    
+    @IBOutlet weak var lbNumber: UILabel!
+    @IBOutlet weak var stepBid: UIStepper!
+    
+    let bidService = BidService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fillInFields()
     }
     
 
@@ -24,5 +38,52 @@ class DetailViewController: UIViewController {
         self.article = article
         self.login = login
     }
+    
+    func fillInFields() {
+        lbWelcome.text = "Welcome, " + login!.getEmail()
+        
+        txtDescription.text = article!.getDescription()
+        txtMinBid.text = String(article!.getMinBid())
+        
+        var highestBid:Double = 0
+        for var bid in article!.bids {
+            if(highestBid < bid.bid) {
+                highestBid = bid.bid
+            }
+        }
+        txtHighestBid.text = String(highestBid)
+        
+        stepBid.minimumValue = highestBid + 20
+        stepBid.maximumValue = highestBid * 100
+        stepBid.value = stepBid.minimumValue
+        
+        lbNumber.text = String(stepBid.value)
+    }
+    
+    func getBidsOfArticle() {
+        bidService.getBids(article: self.article!, listener: self)
+    }
+    
+    func setBids(article: Article, bids: [Bid]) {
+        reloadField(bids: bids)
+    }
+    
+    func reloadField(bids: [Bid]) {
+        var highestBid:Double = 0
+        for var bid in bids {
+            if(highestBid < bid.bid) {
+                highestBid = bid.bid
+            }
+        }
+        txtHighestBid.text = String(highestBid)
+        
+        if(stepBid.value < highestBid) {
+            stepBid.value = highestBid + 20
+            lbNumber.text = String(stepBid.value)
+        }
+    }
 
+    @IBAction func onPressStepper(_ sender: UIStepper) {
+        lbNumber.text = String(sender.value)
+    }
 }

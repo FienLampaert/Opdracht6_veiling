@@ -13,7 +13,7 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
     var articles = [Article]()
     let articleService = ArticleService()
     let bidService = BidService()
-    let login:Login()
+    var login:Login?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,8 +89,10 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
     }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        print("ja")
         let vc = self.storyboard?.instantiateViewController(withIdentifier:"vcDetail") as! DetailViewController
-        vc.setContent(article:articles[indexPath.row], login:self.login)
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.setContent(article:articles[indexPath.row], login:self.login!)
+        //self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true, completion: nil)
     }
 }
