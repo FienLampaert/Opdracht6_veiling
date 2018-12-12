@@ -428,13 +428,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" id="OKl-Kn-FWB">
-                                <rect key="frame" x="0.0" y="28" width="834" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="55" id="OKl-Kn-FWB" customClass="ArticleTableViewCell" customModule="Opdracht6_veiling" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="834" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OKl-Kn-FWB" id="eEZ-tn-xtB">
-                                    <rect key="frame" x="0.0" y="0.0" width="834" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="834" height="54.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNl-sm-hJG">
+                                            <rect key="frame" x="20" y="0.0" width="48" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Iu-3d-l2g">
+                                            <rect key="frame" x="20" y="27" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rNl-sm-hJG" firstAttribute="leading" secondItem="eEZ-tn-xtB" secondAttribute="leading" constant="20" id="ETQ-pf-joz"/>
+                                        <constraint firstItem="rNl-sm-hJG" firstAttribute="top" secondItem="eEZ-tn-xtB" secondAttribute="top" id="Mjn-b1-nSa"/>
+                                        <constraint firstItem="7Iu-3d-l2g" firstAttribute="top" secondItem="rNl-sm-hJG" secondAttribute="bottom" constant="3" id="Pj9-ZV-hy3"/>
+                                        <constraint firstItem="7Iu-3d-l2g" firstAttribute="leading" secondItem="eEZ-tn-xtB" secondAttribute="leading" constant="20" id="aSg-M9-teW"/>
+                                        <constraint firstAttribute="trailing" secondItem="7Iu-3d-l2g" secondAttribute="trailing" constant="772" id="dzk-GV-H7V"/>
+                                        <constraint firstAttribute="trailing" secondItem="rNl-sm-hJG" secondAttribute="trailing" constant="766" id="xKV-xt-fKM"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellSubTitle" destination="7Iu-3d-l2g" id="nnP-xf-163"/>
+                                    <outlet property="cellTitle" destination="rNl-sm-hJG" id="tnB-o7-7Fx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -445,7 +471,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQr-zJ-qJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418" y="668"/>
+            <point key="canvasLocation" x="1417.9856115107914" y="667.98561151079139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F9i-QK-WgV">
