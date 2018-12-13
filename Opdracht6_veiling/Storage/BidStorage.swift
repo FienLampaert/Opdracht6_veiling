@@ -26,7 +26,20 @@ class BidStorage {
             listener.setDocuments(article: article, documents: documents)
         }
         listeners.append(listener)
+       
+    }
+    
+    func addBid(article:Article, bid:Bid) {
         
+        db.collection("Articles").document(article.id).collection("Bids").addDocument(data: [
+            "bid" : bid.bid,
+            "date" : bid.date,
+            "memberId" : bid.memberId])
+        {
+            err in if let error = err {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func close() {

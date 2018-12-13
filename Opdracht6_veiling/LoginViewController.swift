@@ -61,7 +61,7 @@ class LoginViewController: UIViewController, LoginValidationProtocol, RootVCProt
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "bidsTableViewController") as! BidsTableViewController
         vc.setContent(login:login)
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

@@ -49,4 +49,8 @@ class BidService: BidStorageProtocol {
     func close() {
         bidStorage.close()
     }
+    
+    func addBid(article:Article, bid:Bid) {
+        bidStorage.addBid(article: article, bid: bid)
+    }
 }

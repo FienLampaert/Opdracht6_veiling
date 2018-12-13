@@ -25,6 +25,10 @@
 		3FDEDC9321AE931E007F236A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */; };
 		3FE11E5521B91E4B00CC668E /* ArticleStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */; };
 		3FE11E5721B91F8B00CC668E /* ArticleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */; };
+		3FF5ABF321C251BB009A862D /* MemberStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5ABF221C251BB009A862D /* MemberStorage.swift */; };
+		3FF5ABF521C2520A009A862D /* MemberStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5ABF421C2520A009A862D /* MemberStorageProtocol.swift */; };
+		3FF5ABF721C25249009A862D /* MemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5ABF621C25249009A862D /* MemberService.swift */; };
+		3FF5ABF921C25280009A862D /* MemberServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5ABF821C25280009A862D /* MemberServiceProtocol.swift */; };
 		D837B1CD21B995D800BBE66E /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837B1CC21B995D800BBE66E /* ArticleTableViewCell.swift */; };
 		D837B1CF21B9AA7300BBE66E /* BidStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837B1CE21B9AA7300BBE66E /* BidStorage.swift */; };
 		D837B1D121B9AAD200BBE66E /* BidStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837B1D021B9AAD200BBE66E /* BidStorageProtocol.swift */; };
@@ -61,6 +65,10 @@
 		3FDEDC9221AE931E007F236A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStorageProtocol.swift; sourceTree = "<group>"; };
 		3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleServiceProtocol.swift; sourceTree = "<group>"; };
+		3FF5ABF221C251BB009A862D /* MemberStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberStorage.swift; sourceTree = "<group>"; };
+		3FF5ABF421C2520A009A862D /* MemberStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberStorageProtocol.swift; sourceTree = "<group>"; };
+		3FF5ABF621C25249009A862D /* MemberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberService.swift; sourceTree = "<group>"; };
+		3FF5ABF821C25280009A862D /* MemberServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberServiceProtocol.swift; sourceTree = "<group>"; };
 		98F80464799348779D744A1C /* Pods-Opdracht6_veiling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6_veiling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6_veiling/Pods-Opdracht6_veiling.debug.xcconfig"; sourceTree = "<group>"; };
 		D837B1CC21B995D800BBE66E /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		D837B1CE21B9AA7300BBE66E /* BidStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidStorage.swift; sourceTree = "<group>"; };
@@ -119,6 +127,8 @@
 				3FE11E5421B91E4B00CC668E /* ArticleStorageProtocol.swift */,
 				D837B1CE21B9AA7300BBE66E /* BidStorage.swift */,
 				D837B1D021B9AAD200BBE66E /* BidStorageProtocol.swift */,
+				3FF5ABF221C251BB009A862D /* MemberStorage.swift */,
+				3FF5ABF421C2520A009A862D /* MemberStorageProtocol.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -130,6 +140,8 @@
 				3FE11E5621B91F8B00CC668E /* ArticleServiceProtocol.swift */,
 				D837B1D221B9ACD500BBE66E /* BidService.swift */,
 				D837B1D421B9ACE500BBE66E /* BidServiceProtocol.swift */,
+				3FF5ABF621C25249009A862D /* MemberService.swift */,
+				3FF5ABF821C25280009A862D /* MemberServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -405,6 +417,7 @@
 				D87FC22221B8358800BD94B8 /* BidsTableViewController.swift in Sources */,
 				3F33448B21B7C02A002767DA /* Login.swift in Sources */,
 				3FD99FFC21AE812E00C7B4AC /* ViewController.swift in Sources */,
+				3FF5ABF721C25249009A862D /* MemberService.swift in Sources */,
 				D837B1D121B9AAD200BBE66E /* BidStorageProtocol.swift in Sources */,
 				D87FC22821B83DE000BD94B8 /* ArticleService.swift in Sources */,
 				3F33448921B7BFE8002767DA /* RegistrationValidationProtocol.swift in Sources */,
@@ -420,6 +433,9 @@
 				D88EBF3121B80CD70066B3C4 /* RootVCProtocol.swift in Sources */,
 				3FE11E5721B91F8B00CC668E /* ArticleServiceProtocol.swift in Sources */,
 				D88EBF2E21B7EDDD0066B3C4 /* Article.swift in Sources */,
+				3FF5ABF521C2520A009A862D /* MemberStorageProtocol.swift in Sources */,
+				3FF5ABF921C25280009A862D /* MemberServiceProtocol.swift in Sources */,
+				3FF5ABF321C251BB009A862D /* MemberStorage.swift in Sources */,
 				3FD99FFA21AE812E00C7B4AC /* AppDelegate.swift in Sources */,
 				D87FC22621B83B3A00BD94B8 /* ArticleStorage.swift in Sources */,
 				3F01C0C221AFEA910000957B /* RegisterViewController.swift in Sources */,

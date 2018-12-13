@@ -8,13 +8,16 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, BidServiceProtocol {
+class DetailViewController: UIViewController, BidServiceProtocol, MemberServiceProtocol {
+    
+    
     
     
     
     var article:Article?
     var login:Login?
-    
+    var member:Member?
+    var memberService = MemberService()
     
     @IBOutlet weak var lbWelcome: UILabel!
     
@@ -31,6 +34,8 @@ class DetailViewController: UIViewController, BidServiceProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillInFields()
+        getBidsOfArticle()
+        getMember()
     }
     
 
@@ -82,8 +87,23 @@ class DetailViewController: UIViewController, BidServiceProtocol {
             lbNumber.text = String(stepBid.value)
         }
     }
+    
+    func getMember() {
+        memberService.getMember(login: self.login!, listener: self)
+        
+    }
+    
+    func setMember(member: [Member]) {
+        self.member = member[0]
+        lbWelcome.text = "Welcome, " + self.member!.getName()
+    }
 
     @IBAction func onPressStepper(_ sender: UIStepper) {
         lbNumber.text = String(sender.value)
+    }
+    
+    @IBAction func onPressPlaceBid(_ sender: Any) {
+        var newBid = Bid(id: "", bid: stepBid.value, date: Date.init(), memberId: self.member?.id ?? "")
+        bidService.addBid(article: self.article!, bid: newBid)
     }
 }

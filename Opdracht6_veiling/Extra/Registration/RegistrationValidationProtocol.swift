@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 protocol RegistrationValidationProtocol {
     func registrationCompleted(login:Login?, error:String?)

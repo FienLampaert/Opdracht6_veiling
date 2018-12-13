@@ -92,7 +92,6 @@ class BidsTableViewController: UITableViewController, ArticleServiceProtocol, Bi
         print("ja")
         let vc = self.storyboard?.instantiateViewController(withIdentifier:"vcDetail") as! DetailViewController
         vc.setContent(article:articles[indexPath.row], login:self.login!)
-        //self.navigationController?.pushViewController(vc, animated: true)
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
